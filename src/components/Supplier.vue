@@ -4,7 +4,7 @@
     <h2 class="stock" v-bind:class="{ 'stockOk': status }">
       Stock: {{ status }}
     </h2>
-    <h3>Date de dernière relevé des stock: {{ checkedAt.toLocaleString() }}</h3>
+    <h3>Date de dernière relevé des stock: {{ checkedAt }}</h3>
   </div>
 </template>
 
