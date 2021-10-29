@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <router-link class="link-menu" to="/">Home </router-link>
-    <router-link class="link-menu" to="/suppliers">Suppliers List </router-link>
-    <router-link class="link-menu" to="/map">Suppliers Map</router-link>
-    <router-view></router-view>
-    <button @click="onSuppliersListClick">Cliquez ici</button><br>
-    <button @click="onMapClick">Cliquez ici 2</button>
+    <h1>Que voulez vous faire ?</h1>
+    <nav>
+      <router-link class="link-menu" to="/">Home </router-link>
+      <router-link class="link-menu" to="/suppliers">Consulter la liste des fournisseurs </router-link>
+      <router-link class="link-menu" to="/map">Voir la carte</router-link>
+      <router-view></router-view>
+    </nav>
   </div>
 </template>
 
