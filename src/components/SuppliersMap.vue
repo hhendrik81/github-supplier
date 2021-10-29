@@ -2,8 +2,8 @@
   <div>
     <h1>Carte des Fournisseurs</h1>
     <l-map style="height: 300px" :zoom="zoom" :center="center">
-    <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
-    <l-marker :lat-lng="markerLatLng"></l-marker>
+      <l-tile-layer :url="url" :attribution="attribution"></l-tile-layer>
+      <l-marker :lat-lng="markerLatLng"></l-marker>
     </l-map>
   </div>
 </template>
