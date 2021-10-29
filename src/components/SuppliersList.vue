@@ -18,19 +18,27 @@ import Supplier from './Supplier.vue';
 export default {
   name: 'SuppliersList',
   components: {
-    Supplier
+    Supplier,
   },
   data() {
-    return{ suppliers:[{
-        name: 'Mon Fournisseur',
-        status: false,
-        checkedAt: new Date()
-        }]
-    }
-  }
-   
-  
-}
+    return {
+      suppliers: [
+        {
+          id: 1,
+          name: 'Mon Fournisseur',
+          status: false,
+          checkedAt: new Date(),
+        },
+        {
+          id: 2,
+          name: 'Mon Fournisseur 2',
+          status: false,
+          checkedAt: new Date(),
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style></style>
