@@ -45,5 +45,7 @@ export default {
 }
 .link-menu{
   background-color: #4fc08d;
+  margin: 10px;
+  padding: 10px;
 }
 </style>
