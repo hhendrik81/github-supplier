@@ -29,7 +29,7 @@ export default {
    mounted () {
     axios
       .get('https://api-suppliers.herokuapp.com/api/suppliers')
-      .then(response => (this.suppliers = response))
+      .then(response => (this.suppliers = response.data))
   }
 };
 </script>
