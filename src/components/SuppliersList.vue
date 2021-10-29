@@ -21,7 +21,7 @@ export default {
     Supplier
   },
   data() {
-    return{ suppliers[{
+    return{ suppliers:[{
         name: 'Mon Fournisseur',
         status: false,
         checkedAt: new Date()
