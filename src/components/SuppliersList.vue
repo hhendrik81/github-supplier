@@ -25,7 +25,7 @@ export default {
       suppliers: [
         {
           id: 1,
-          name: 'Mon Fournisseur',
+          name: 'Mon Fournisseur 1',
           status: false,
           checkedAt: new Date(),
         },
