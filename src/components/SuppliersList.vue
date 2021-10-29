@@ -26,7 +26,7 @@ export default {
         {
           id: 1,
           name: 'Mon Fournisseur 1',
-          status: false,
+          status: true,
           checkedAt: new Date(),
         },
         {
