@@ -2,13 +2,13 @@
   <div>
     <h1>Liste des Fournisseurs</h1>
     <br />
-    <!-- <Supplier
+    <Supplier
       v-for="supplier in suppliers"
       :key="supplier.id"
       :name="supplier.name"
       :status="supplier.status"
       :checkedAt="supplier.checkedAt"
-    /> -->
+    />
   </div>
 </template>
 
@@ -20,6 +20,14 @@ export default {
   components: {
     Supplier
   },
+  data() {
+    return{ suppliers[{
+        name: 'Mon Fournisseur',
+        status: false,
+        checkedAt: new Date()
+        }]
+    }
+  }
    
   
 }
