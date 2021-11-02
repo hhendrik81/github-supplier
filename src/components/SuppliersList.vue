@@ -14,7 +14,7 @@
 
 <script>
 import Supplier from './Supplier.vue';
-import axios from 'axios'
+import axios from 'axios';
 
 export default {
   name: 'SuppliersList',
@@ -26,9 +26,8 @@ export default {
       suppliers: [],
     }
   },
-   mounted () {
-    axios
-      .get('https://api-suppliers.herokuapp.com/api/suppliers')
+    async mounted () {
+    await axios.get('https://api-suppliers.herokuapp.com/api/suppliers')
       .then(response => (this.suppliers = response.data))
   }
 };
