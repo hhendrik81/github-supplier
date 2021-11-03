@@ -1,11 +1,16 @@
 <template>
   <div id="app">
     <h1>Que voulez vous faire ?</h1>
-    <nav>
-      <router-link class="link-menu" to="/">Home </router-link>
-      <router-link class="link-menu" to="/suppliers">Consulter la liste des fournisseurs </router-link>
-      <router-link class="link-menu" to="/map">Voir la carte</router-link>
+    <nav class=" flex px-2 pt-2 pb-4 sm:flex sm:p-0">
+      <div>
+        <img src="https://static.wixstatic.com/media/77ef90_83b08bc69f2644a3b16483e8e0e8cfcf~mv2.png/v1/fill/w_220,h_220,al_c,q_85,usm_4.00_1.00_0.00/logo_native%20copie.webp" alt="">
+      </div>
+      <div class="flex-1 flex justify-center mr-auto">
+      <router-link class="block px-2 py-1 text-black font-semibold rounded hover:bg-v-color" to="/">Home </router-link>
+      <router-link class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-v-color sm:mt-0 sm:ml-2" to="/suppliers">Consulter la liste des fournisseurs </router-link>
+      <router-link class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-v-color sm:mt-0 sm:ml-2" to="/map">Voir la carte</router-link>
       <router-view></router-view>
+      </div>
     </nav>
   </div>
 </template>
@@ -32,6 +37,7 @@ export default {
       alert('coucou');
     },
   },
+  
 };
 </script>
 
