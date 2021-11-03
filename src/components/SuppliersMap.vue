@@ -2,8 +2,14 @@
   <div>
     <h1>Carte des Fournisseurs</h1>
     <div id="map">
+       <Map
+      v-for="marker in markers"
+      :key="marker.id"
+      :latitude="marker.latitude"
+      :longitude="marker.longitude"
+      />
       <l-map>
-        <l-marker v-for="supplier in suppliers">
+        <l-marker v-for="supplier in suppliers" :key="supplier.id" :latitude="supplier.latitude" :longitude="supplier.longitude" >
 
         </l-marker>
       </l-map>
@@ -16,15 +22,16 @@
 
 import leaflet from "leaflet"
 import { onMounted } from '@vue/runtime-core';
-import Supplier from './Supplier.vue';
 import axios from 'axios';
+import Map from './Map.vue';
+
 
 
 export default {
   name: 'SuppliersMap',
 
   components: {
-    Supplier
+    Map
   },
   setup() {
     let mymap;
@@ -47,12 +54,13 @@ export default {
 
   data () {
     return {
-       suppliers: [], 
+       markers: [],
+
     }     
   },
    async mounted () {
     await axios.get('https://api-suppliers.herokuapp.com/api/suppliers')
-      .then(response => (this.suppliers = response.data))
+      .then(response => (this.markers = response.data))
   }
   
 };

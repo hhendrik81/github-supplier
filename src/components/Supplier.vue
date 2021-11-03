@@ -12,7 +12,7 @@
 export default {
   name: 'Supplier',
   props: [
-    'name', 'status', 'checkedAt','latitude', 'longitude'
+    'name', 'status', 'checkedAt'
   ]
 } 
 </script>

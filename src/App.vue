@@ -1,15 +1,15 @@
 <template>
   <div id="app">
     <h1>Que voulez vous faire ?</h1>
-    <nav class=" flex px-2 pt-2 pb-4 sm:flex sm:p-0">
-      <div>
+    <nav class="">
+      <!-- <div>
         <img src="https://static.wixstatic.com/media/77ef90_83b08bc69f2644a3b16483e8e0e8cfcf~mv2.png/v1/fill/w_220,h_220,al_c,q_85,usm_4.00_1.00_0.00/logo_native%20copie.webp" alt="">
-      </div>
-      <div class="flex-1 flex justify-center mr-auto">
-      <router-link class="block px-2 py-1 text-black font-semibold rounded hover:bg-v-color" to="/">Home </router-link>
-      <router-link class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-v-color sm:mt-0 sm:ml-2" to="/suppliers">Consulter la liste des fournisseurs </router-link>
-      <router-link class="mt-1 block px-2 py-1 text-black font-semibold rounded hover:bg-v-color sm:mt-0 sm:ml-2" to="/map">Voir la carte</router-link>
-      <router-view></router-view>
+      </div> -->
+      <div class="">
+        <router-link class="px-2 py-1 text-black font-semibold rounded hover:bg-v-color" to="/">Home </router-link>
+        <router-link class="mt-1  px-2 py-1 text-black font-semibold rounded hover:bg-v-color sm:mt-0 sm:ml-2" to="/suppliers">Consulter la liste des fournisseurs </router-link>
+        <router-link class="mt-1 px-2 py-1 text-black font-semibold rounded hover:bg-v-color sm:mt-0 sm:ml-2" to="/map">Voir la carte</router-link>
+        <router-view></router-view>
       </div>
     </nav>
   </div>
@@ -20,6 +20,7 @@ import Home from './components/Home.vue';
 import SuppliersList from './components/SuppliersList.vue';
 import SuppliersMap from './components/SuppliersMap.vue';
 import Supplier from './components/Supplier.vue';
+import Map from './components/Map.vue';
 
 export default {
   name: 'App',
@@ -27,7 +28,8 @@ export default {
     Home,
     SuppliersList,
     SuppliersMap,
-    Supplier
+    Supplier,
+    Map
   },
   methods: {
     onSuppliersListClick() {
